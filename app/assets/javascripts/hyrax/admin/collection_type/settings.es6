@@ -13,6 +13,12 @@ export default class {
     // Watch for changes to "sharable" checkbox
     $("#collection_type_sharable").on('change', () => { this.sharableChanged() })
     this.sharableChanged()
+
+    // Watch for changes to the tab,  and alert user that changes need to be saved.
+    $('.panel-default li.coll-panel').on('click', function() {
+       alert('Remember to "Save changes" before leaving tab, or you may lose your changes.');
+    })
+
   }
 
   // Based on the "sharable" checked/unchecked, enable/disable adjust share_applies_to_new_works checkbox
