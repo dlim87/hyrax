@@ -348,6 +348,10 @@ en:
     base:
       citations:
         header: 'Citations:'
+      currently_shared:
+        currently_sharing: Currently Shared With
+        table_title_access: Access Level
+        table_title_user: Person/Group
       form:
         batch_link: Batch upload
         batch_upload_hint: To create a separate work for each of the files, go to
@@ -407,7 +411,6 @@ en:
         legend_html: Representative Media
       form_share:
         add_sharing: Add Sharing
-        currently_sharing: Currently Shared With
         directions: Regardless of the visibility settings for this work, you can also share it with other users and groups.
       form_thumbnail:
         help_html: Select the file to be used as the thumbnail for this work.
@@ -453,6 +456,10 @@ en:
         resource_type: You may select multiple types to apply to all files
         title: Filename will be the default title. Please provide a more meaningful title, and filenames will still be preserved by the system.
     batch_edits:
+      currently_shared:
+        share_batch_with: Share Batch With
+        table_title_access: Access Level
+        table_title_user: Person/Group
       delete_selected:
         button_label: Delete Selected
     batch_uploads:
@@ -900,8 +907,6 @@ en:
         save_note_html: Permissions are <strong>not</strong> saved until the &quot;Save&quot; button is pressed at the bottom of the page.
         select_group: Select a group
         share_with: Share With
-        table_title_access: Access Level
-        table_title_user: Person/Group
         user_search: Search for a user
       versioning:
         current: Current Version
