@@ -7,7 +7,7 @@ module Hyrax
     #  - user is permitted to update any non-collection permissions
     attr_reader :depositor, :unauthorized_collection_managers
 
-    # @param [Object] a work
+    # @param [Object] GenericWorkForm (if called for object) or GenericWork (if called for file set)
     # @param [Ability] user's current_ability
     def initialize(object:, ability:)
       @object = object
@@ -98,7 +98,7 @@ module Hyrax
           @object.member_of_collections.each do |collection|
             belongs_to << collection.id
           end
-          belongs_to << @object.admin_set_id
+          belongs_to << @object.admin_set_id unless @object.admin_set_id.empty?
           belongs_to
         end
       end
