@@ -1,0 +1,26 @@
+.help-icon {
+  @extend .glyphicon;
+  @extend .glyphicon-question-sign;
+  @extend .large-icon;
+  top: 5px;
+}
+
+.batch-toggle {
+  padding: 1.5em 0 1.5em 1em;
+}
+
+.sort-toggle {
+  padding: 1.5em 0 0 1em;
+}
+
+#hide_addl_descriptions {
+  margin-bottom: $padding-large-vertical;
+}
+
+.glyphicon-chevron-right-helper.collapsed .chevron {
+  @extend .glyphicon-chevron-right;
+}
+.glyphicon-chevron-right-helper .chevron {
+  @extend .glyphicon;
+  @extend .glyphicon-chevron-down;
+}

@@ -1,0 +1,171 @@
+legend small {
+  margin-left:.5em;
+  color: #999999;
+  font-size: 15px;
+}
+
+.label-large {
+  font-size: 110%;
+  line-height: 1.2;
+  padding: .3em .6em;
+  white-space: normal;
+  position: relative;
+
+
+  input[type="checkbox"]{
+    margin:-2px 0 0;
+    position: absolute;
+    left:.5em;
+    top:38%;
+  }
+}
+
+#savewidget a {
+  color: #2a62bc;
+}
+
+.label-checkbox .label-text {
+  display:block;
+  padding-left:1.2em;
+}
+
+.form-group.has-error input,
+.form-group.has-error option,
+.form-group.has-error textarea {
+  color:$gray-dark;
+}
+
+.form-actions {
+  margin-top: 1em;
+}
+
+form {
+  label { font-weight: bold; }
+
+  label { margin-bottom: 7px; }
+
+  .help-block {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.set-access-controls {
+  label { font-weight: normal; }
+  & .form-group {
+    padding: 0 1.75em;
+
+    &.file_set_visibility_during_embargo,
+    &.file_set_visibility_during_lease {
+      padding-right: 0;
+    }
+
+    &.file_set_embargo_release_date,
+    &.file_set_lease_expiration_date,
+    &.file_set_visibility_after_embargo,
+    &.file_set_visibility_after_lease {
+      padding-left: 0;
+    }
+
+    &.file_set_visibility_after_embargo,
+    &.file_set_visibility_after_lease {
+      margin-bottom: 3px;
+      margin-top: 3px;
+    }
+  }
+
+  #collapseLease .form-group {
+    padding: 0;
+  }
+
+  #collapseEmbargo .form-group {
+    padding: 0;
+
+    &.generic_work_visibility_after_embargo {
+      margin-top: 6px;
+    }
+  }
+
+  .form-inline {
+    .control-label, label {
+      padding-left: 0;
+      display: inline;
+      &:after {
+        content: ' ';
+      }
+    }
+    .help-block {
+      display: inline;
+      &:before {
+        content: ' ';
+      }
+    }
+  }
+}
+
+.collection-types-settings {
+
+  .form-inline {
+    label {
+      font-weight: bold;
+
+      input {
+        margin-right: 0.25em;
+      }
+    }
+
+    .control-label,
+    label {
+      display: inline;
+      padding-left: 0;
+
+      &::after {
+        content: ' ';
+      }
+    }
+
+    .help-block {
+      display: inline;
+
+      &::before {
+        content: ' ';
+      }
+    }
+  }
+}
+
+.control-label.required {
+  abbr {
+    font-weight: bold;
+  }
+}
+
+form.button-to {
+  margin:0 .3em;
+}
+
+.required-tag {
+  vertical-align: super;
+}
+
+.permission-add-user,
+.permission-add-group {
+  margin-bottom: 1em;
+  margin-left: 0;
+}
+
+.permissions-add-user-label,
+.permissions-add-group-label {
+  border: 0;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0;
+  padding: 7px 15px;
+}
+
+.search-form {
+
+  .form-group {
+    margin: 0;
+  }
+}
