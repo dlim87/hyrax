@@ -13,9 +13,9 @@ export default class Autocomplete {
    */
   setup (element, fieldName, url) {
     if(element.data('autocomplete-type').length > 0) {
-      byDataAttribute(element, url)
+      this.byDataAttribute(element, url)
     } else {
-      byFieldName(element, fieldName, url)
+      this.byFieldName(element, fieldName, url)
     }
   }
 
