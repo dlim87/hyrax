@@ -41,23 +41,24 @@ export default class Autocomplete {
 
   byFieldName(element, fieldName, url) {
     switch (fieldName) {
-    case 'work':
-      new Resource(
-        element,
-        url,
-        { excluding: element.data('exclude-work') }
-      )
-      break
-    case 'collection':
-      new Resource(
-        element,
-        url)
-      break
-    case 'based_near':
-      new LinkedData(element, url)
-    default:
-      new Default(element, url)
-      break
+      case 'work':
+        new Resource(
+          element,
+          url,
+          { excluding: element.data('exclude-work') }
+        )
+        break
+      case 'collection':
+        new Resource(
+          element,
+          url)
+        break
+      case 'based_near':
+        new LinkedData(element, url)
+      default:
+        new Default(element, url)
+        break
+    }
   }
 
 }
