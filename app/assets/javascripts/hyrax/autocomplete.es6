@@ -12,28 +12,52 @@ export default class Autocomplete {
    * @param {string} url - The url for the autocompete search endpoint
    */
   setup (element, fieldName, url) {
-    switch (fieldName) {
-      case 'work':
-        new Resource(
-          element,
-          url,
-          { excluding: element.data('exclude-work') }
-        )
-        break
-      case 'collection':
-        new Resource(
-          element,
-          url)
-        break
-      case 'based_near':
-        new LinkedData(element, url)
-      default:
-        if(url.match('/authorities/search')){
-          new LinkedData(element, url)
-        } else {
-          new Default(element, url)
-        }
-        break
+    if(element.data('autocomplete-type').length > 0) {
+      byDataAttribute(element, url)
+    } else {
+      byFieldName(element, fieldName, url)
     }
   }
+
+  byDataAttribute(element, url) {
+    let type = element.data('autocomplete-type')
+    let exlude = element.data('exclude-work')
+    if(type === 'resource' && exclude.length > 0) {
+      new Resource(
+        element,
+        url,
+        { excluding: exclude }
+      )
+    } else if(type == 'resource' ) {
+      new Resource(
+        element,
+        url)
+    } else if(type === 'linked') {
+      new LinkedData(element, url)
+    } else {
+      new Default(element, url)
+    }
+  }
+
+  byFieldName(element, fieldName, url) {
+    switch (fieldName) {
+    case 'work':
+      new Resource(
+        element,
+        url,
+        { excluding: element.data('exclude-work') }
+      )
+      break
+    case 'collection':
+      new Resource(
+        element,
+        url)
+      break
+    case 'based_near':
+      new LinkedData(element, url)
+    default:
+      new Default(element, url)
+      break
+  }
+
 }
