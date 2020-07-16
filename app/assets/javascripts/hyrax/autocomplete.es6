@@ -12,7 +12,7 @@ export default class Autocomplete {
    * @param {string} url - The url for the autocompete search endpoint
    */
   setup (element, fieldName, url) {
-    if(element.data('autocomplete-type').length > 0) {
+    if(element.data('autocomplete-type') && element.data('autocomplete-type').length > 0) {
       this.byDataAttribute(element, url)
     } else {
       this.byFieldName(element, fieldName, url)
